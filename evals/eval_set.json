@@ -1,0 +1,82 @@
+[
+  {
+    "query": "我剛跑完了遺傳算法的Python代碼，結果也有了，能幫我把這些整理成一篇美賽格式的論文嗎？代碼在 `models/ga_solver.py`，結果圖表在 `results/` 目錄下。",
+    "should_trigger": true
+  },
+  {
+    "query": "帮我写论文，这是题目和代码。",
+    "should_trigger": true
+  },
+  {
+    "query": "ok 這題的靈敏度分析數據出來了，附件是我做的模型假設筆記和一個excel的結果表格，能不能直接轉成國賽論文的格式？編號是 2024 C題。",
+    "should_trigger": true
+  },
+  {
+    "query": "我有個數模賽題的PDF，還有MATLAB寫的求解腳本，想用LaTeX寫成論文投亞太杯，你能搞定嗎？",
+    "should_trigger": true
+  },
+  {
+    "query": "根據我這個 `main.py` 里的VRP模型邏輯，幫生成一篇完整的建模論文latex文件，要符合CUMCM格式。",
+    "should_trigger": true
+  },
+  {
+    "query": "华东杯的建模论文怎么写啊？我有赛题截图和一些零散的建模笔记。",
+    "should_trigger": true
+  },
+  {
+    "query": "這些代碼跑出來的結果圖表和數據我都放 `output/` 了，題目描述在問題1.txt里，幫我生成latex論文吧，摘要要寫詳細點。",
+    "should_trigger": true
+  },
+  {
+    "query": "把这份代码逻辑转化成一篇数模竞赛论文，符号说明和模型假设都要有。",
+    "should_trigger": true
+  },
+  {
+    "query": "我寫了一個模擬退火算法求解旅行商問題，想在論文里描述這個過程，能幫我用LaTeX寫一下模型建立與求解那部分嗎？",
+    "should_trigger": true
+  },
+  {
+    "query": "老師給了個賽題，我手寫了一些建模思路的草稿（有點亂），還有python跑的蒙特卡洛結果，幫我搞一篇完整的論文出來。",
+    "should_trigger": true
+  },
+  {
+    "query": "幫我檢查一下這個 LaTeX 論文的目錄結構有沒有問題，文件是 `paper.tex`。",
+    "should_trigger": false
+  },
+  {
+    "query": "這段 python 代碼報錯了，`IndexError: list index out of range`，幫我看下怎麼修。文件在 `solver.py` 第 45 行。",
+    "should_trigger": false
+  },
+  {
+    "query": "用 matplotlib 畫一個散點圖，x 是 [1,2,3]，y 是 [4,5,6]，要加標題和坐標軸標籤。",
+    "should_trigger": false
+  },
+  {
+    "query": "幫我翻譯這篇英文摘要成中文，是關於機器學習的。",
+    "should_trigger": false
+  },
+  {
+    "query": "這個數學公式怎麼用 LaTeX 寫出來？是二重積分加一個求和符號。",
+    "should_trigger": false
+  },
+  {
+    "query": "給我的數據做個描述性統計分析，包括均值、中位數、標準差，數據在 data.csv 里。",
+    "should_trigger": false
+  },
+  {
+    "query": "解釋一下什麼是遺傳算法，跟粒子群優化有什麼區別？",
+    "should_trigger": false
+  },
+  {
+    "query": "幫我把這個 markdown 筆記轉成 PDF，用 pandoc 或者別的什麼方法都行。",
+    "should_trigger": false
+  },
+  {
+    "query": "我想用 Django 搭建一個網站，能幫我寫個簡單的登錄頁面嗎？用 bootstrap 做前端。",
+    "should_trigger": false
+  },
+  {
+    "query": "幫我優化一下這段 MATLAB 代碼的運行速度，它處理一個 10000x10000 矩陣太慢了。",
+    "should_trigger": false
+  }
+]
