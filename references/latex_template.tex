@@ -1,0 +1,210 @@
+% === CUMCM/MCM-ICM 数模论文完整 LaTeX 模板 ===
+% 使用: xelatex paper.tex
+\documentclass[12pt,a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{cite}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[justification=centering]{caption}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{indentfirst}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% 页眉页脚
+\pagestyle{fancy}\fancyhf{}\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{\fancyhf{}\renewcommand{\headrulewidth}{0pt}\cfoot{\thepage}}
+
+% 字体与行距
+\setstretch{1.2}
+\zihao{-4}
+
+% 标题格式：一级居中，二三级左对齐
+\titleformat{\section}
+  {\centering\zihao{4}\heiti\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\zihao{-4}\heiti\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\zihao{-4}\heiti\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{name=\section,numberless}
+  {\centering\zihao{4}\heiti\bfseries}{}{0em}{}
+
+% 公式/图表编号
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+\captionsetup{labelsep=quad,font=small,justification=centering}
+\captionsetup[algorithm]{justification=centering}
+
+% 代码格式
+\lstset{basicstyle=\zihao{5}\ttfamily,numbers=left,numberstyle=\tiny,
+  breaklines=true,frame=single,keepspaces=true,columns=flexible}
+
+% 超链接
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue,bookmarks=true}
+
+% 图形路径
+\graphicspath{{data/figures/}{../figures/}{../../data/figures/}}
+
+\title{}
+\author{}\date{}
+
+\begin{document}
+
+% === 第一页：摘要页 ===
+\thispagestyle{empty}
+% 参赛编号（如：A016）
+% 论文题目（三号黑体，居中）
+% 摘要正文（小四宋体）—— 三段式：前言→正文(每问题一段含结果)→收尾
+% 关键词（左对齐，3-5个，分号分隔）
+
+\newpage
+
+% === 目录（可选）===
+% 2024年多数展示论文不设独立目录页。若需要目录，取消下面注释：
+% \thispagestyle{empty}
+% \tableofcontents
+% \newpage
+
+% === 正文开始 ===
+\setcounter{page}{1}
+\pagestyle{fancy}
+
+% 1. 问题重述
+\section{问题重述}
+\subsection{问题背景}
+（此处用自己的话描述赛题背景，不复制原文——说明情景、列出关键数据。）
+
+\subsection{问题重述}
+（此处列出题目要求解决的具体问题，包含题目给出的关键数字。⚠查重高风险区！）
+
+% 2. 问题分析
+\section{问题分析}
+\subsection{问题一分析}
+（问题一的数学本质是什么？为什么选择后续的建模方法？）
+
+\subsection{问题二分析}
+（问题二与问题一的依赖关系？方法选择理由？）
+
+\subsection{问题三分析}
+（以此类推，每子问题独立成小节。）
+
+% 技术路线图（放在问题分析末尾）
+% \begin{figure}[h]\centering
+% \includegraphics[width=0.92\textwidth]{figures/技术路线图.png}
+% \caption{总体技术路线}\label{fig:roadmap}
+% \end{figure}
+
+% 3. 模型假设
+\section{模型假设}
+\textbf{假设1：}（具体假设内容，含关键处理细节和量化数据。）\\
+\textbf{假设2：}（每条假设解释为什么做此假设，与后续模型有何关联。）\\
+\textbf{假设3：}（禁止空洞假设——不写"仅考虑理想条件"一类套话。）
+
+% 4. 符号说明
+\section{符号说明}
+（此处用三线表列出主要全局变量——三列：符号、含义、单位。临时变量不列。）
+
+% 5. 问题一模型的建立与求解
+\section{问题一模型的建立与求解}
+\subsection{数据预处理}
+（数据来源、清洗逻辑、关键数字。用文字说明，不是只列公式。）
+
+\subsection{模型建立}
+（建模动机→逐步推导→公式前后有文字解释→约束条件含义说明。）
+
+\subsection{模型求解}
+（算法步骤、参数设置。复杂算法配伪代码或流程图。）
+
+\subsection{结果分析}
+（表格+文字解读+图表引用。数值必须与代码输出一致。）
+
+% 6. 问题二模型的建立与求解（同上结构）
+% 7. 问题三模型的建立与求解（同上结构）
+
+% 灵敏度分析（独立成章）
+\section{灵敏度分析}
+\subsection{模型对XXX参数的灵敏性}
+（参数在[范围]内以步长变化 → 目标值变化 → 敏感/不敏感？结论。）
+
+% 模型检验（三种形式：稳定性敏感性分析 / 统计检验误差分析 / 新旧模型对比）
+\section{模型检验}
+（Q1预测精度验证(WAPE/MAPE/RMSE+分层)、Q2约束可行性验证(每类约束违反数)、
+Q3方案验证(重优化违反数/成本口径)、基准对比、综合PASS声明。）
+
+% 模型评价与推广（三段式：优点→缺点→改进推广）
+\section{模型评价与推广}
+\subsection{模型的优点}
+（3-4条，每条对应具体方法贡献——禁止"模型合理""结果可靠"。）
+\subsection{模型的缺点}
+（2-3条诚实局限——按重要性排序。）
+\subsection{模型的改进与推广}
+（改进方向具体可操作，推广说明适用范围。）
+
+% === 参考文献（GB/T 7714，完整8种文献类型） ===
+\section{参考文献}
+\begin{thebibliography}{99}
+\bibitem{ref1} 作者. 题名[J]. 期刊名, 年, 卷(期): 页码.
+\bibitem{ref2} 作者. 书名[M]. 出版地: 出版社, 出版年.
+\bibitem{ref3} 作者. 题名[D]. 出版地: 出版者, 出版年.
+\bibitem{ref4} 作者. 题名[C]//论文集名称. 会议地点, 会议日期.
+\bibitem{ref5} 专利申请者. 专利题名: 专利国别, 专利号[P]. 公告日期.
+\bibitem{ref6} 作者. 题名[EB/OL]. (发布日期)[引用日期]. 获取路径.
+\bibitem{ref7} 作者. 题名[R]. 出版地: 出版者, 出版年.
+\bibitem{ref8} 标准号. 题名[S]. 出版地: 出版者, 出版年.
+\end{thebibliography}
+
+% === 附录 ===
+% 附录内容（不限六件套，还可包括：详细证明、外部数据、大流程图、繁杂图表）
+\appendix
+\renewcommand{\thesection}{附录\Alph{section}}
+
+% 附录A：支撑文件列表
+\section*{附录A\quad 支撑文件列表}
+\addcontentsline{toc}{section}{附录A\quad 支撑文件列表}
+支撑文件目录结构：
+\begin{verbatim}
+├── Q1/solve_q1.py, plot_q1.py
+├── Q2/milp_model.py, verify_q2.py
+└── result1.xlsx, result2.xlsx
+\end{verbatim}
+
+% 附录B~D：各问题求解结果表
+\section*{附录B\quad 问题一求解结果}
+\addcontentsline{toc}{section}{附录B\quad 问题一求解结果}
+% 完整数表（正文引用："详见附录B"）
+
+\section*{附录C\quad 问题二求解结果}
+\addcontentsline{toc}{section}{附录C\quad 问题二求解结果}
+
+\section*{附录D\quad 问题三求解结果}
+\addcontentsline{toc}{section}{附录D\quad 问题三求解结果}
+
+% 附录E：关键公式推导
+\section*{附录E\quad 关键公式推导}
+\addcontentsline{toc}{section}{附录E\quad 关键公式推导}
+% 正文省略的长推导
+
+% 附录F：核心程序代码
+\section*{附录F\quad 核心程序代码}
+\addcontentsline{toc}{section}{附录F\quad 核心程序代码}
+\lstset{basicstyle=\zihao{5}\ttfamily, frame=single, breaklines=true, numbers=left}
+\begin{minipage}{\textwidth}
+\lstinputlisting[language=Python]{code/solve.py}
+\end{minipage}
+
+\end{document}
